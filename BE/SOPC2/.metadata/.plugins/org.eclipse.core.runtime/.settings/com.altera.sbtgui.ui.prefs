@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\BE\\SOPC2\\software\\test2
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\BE\\SOPC2\\button.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\BE\\SOPC2\\software\\test2_bsp

@@ -1,0 +1,363 @@
+11:19:45 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+In file included from ../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:34:0,
+                 from hello_world_small.c:20:
+hello_world_small.c: In function 'main':
+../test2_bsp/system.h:175:18: error: called object is not a function or function pointer
+ #define LED_BASE 0x11020
+                  ^
+../test2_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:38:55: note: in expansion of macro 'IOWR'
+ #define IOWR_ALTERA_AVALON_PIO_DATA(base, data)       IOWR(base, 0, data)
+                                                       ^
+hello_world_small.c:42:3: note: in expansion of macro 'IOWR_ALTERA_AVALON_PIO_DATA'
+   IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE(1), cnt&0xff);
+   ^
+hello_world_small.c:42:31: note: in expansion of macro 'LED_BASE'
+   IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE(1), cnt&0xff);
+                               ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:20:07 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+In file included from ../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:34:0,
+                 from hello_world_small.c:20:
+hello_world_small.c: In function 'main':
+hello_world_small.c:42:39: error: subscripted value is neither array nor pointer nor vector
+   IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE[1], cnt&0xff);
+                                       ^
+../test2_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:38:55: note: in expansion of macro 'IOWR'
+ #define IOWR_ALTERA_AVALON_PIO_DATA(base, data)       IOWR(base, 0, data)
+                                                       ^
+hello_world_small.c:42:3: note: in expansion of macro 'IOWR_ALTERA_AVALON_PIO_DATA'
+   IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE[1], cnt&0xff);
+   ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:20:08 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:22:26 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:36:2: error: 'led' undeclared (first use in this function)
+  led = LED_BASE[1]
+  ^
+hello_world_small.c:36:2: note: each undeclared identifier is reported only once for each function it appears in
+hello_world_small.c:36:16: error: subscripted value is neither array nor pointer nor vector
+  led = LED_BASE[1]
+                ^
+hello_world_small.c:37:2: error: expected ';' before 'int'
+  int cnt = 0;
+  ^
+In file included from ../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:34:0,
+                 from hello_world_small.c:20:
+hello_world_small.c:42:36: error: 'cnt' undeclared (first use in this function)
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+                                    ^
+../test2_bsp//HAL/inc/io.h:75:66: note: in definition of macro 'IOWR'
+   __builtin_stwio (__IO_CALC_ADDRESS_NATIVE ((BASE), (REGNUM)), (DATA))
+                                                                  ^
+hello_world_small.c:42:3: note: in expansion of macro 'IOWR_ALTERA_AVALON_PIO_DATA'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+   ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:22:27 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:22:55 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:36:2: error: 'led' undeclared (first use in this function)
+  led = LED_BASE[1];
+  ^
+hello_world_small.c:36:2: note: each undeclared identifier is reported only once for each function it appears in
+hello_world_small.c:36:16: error: subscripted value is neither array nor pointer nor vector
+  led = LED_BASE[1];
+                ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:22:57 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:23:31 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+In file included from ../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:34:0,
+                 from hello_world_small.c:20:
+hello_world_small.c: In function 'main':
+hello_world_small.c:22:13: error: expected expression before '=' token
+ #define led = LED_BASE[1]
+             ^
+../test2_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:38:55: note: in expansion of macro 'IOWR'
+ #define IOWR_ALTERA_AVALON_PIO_DATA(base, data)       IOWR(base, 0, data)
+                                                       ^
+hello_world_small.c:42:3: note: in expansion of macro 'IOWR_ALTERA_AVALON_PIO_DATA'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+   ^
+hello_world_small.c:42:31: note: in expansion of macro 'led'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+                               ^
+hello_world_small.c:22:23: error: subscripted value is neither array nor pointer nor vector
+ #define led = LED_BASE[1]
+                       ^
+../test2_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:38:55: note: in expansion of macro 'IOWR'
+ #define IOWR_ALTERA_AVALON_PIO_DATA(base, data)       IOWR(base, 0, data)
+                                                       ^
+hello_world_small.c:42:3: note: in expansion of macro 'IOWR_ALTERA_AVALON_PIO_DATA'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+   ^
+hello_world_small.c:42:31: note: in expansion of macro 'led'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+                               ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:23:32 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:36:43 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+In file included from ../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:34:0,
+                 from hello_world_small.c:20:
+hello_world_small.c: In function 'main':
+hello_world_small.c:22:13: error: expected expression before '=' token
+ #define led = LED_BASE[1]
+             ^
+../test2_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:38:55: note: in expansion of macro 'IOWR'
+ #define IOWR_ALTERA_AVALON_PIO_DATA(base, data)       IOWR(base, 0, data)
+                                                       ^
+hello_world_small.c:42:3: note: in expansion of macro 'IOWR_ALTERA_AVALON_PIO_DATA'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+   ^
+hello_world_small.c:42:31: note: in expansion of macro 'led'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+                               ^
+hello_world_small.c:22:23: error: subscripted value is neither array nor pointer nor vector
+ #define led = LED_BASE[1]
+                       ^
+../test2_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test2_bsp//drivers/inc/altera_avalon_pio_regs.h:38:55: note: in expansion of macro 'IOWR'
+ #define IOWR_ALTERA_AVALON_PIO_DATA(base, data)       IOWR(base, 0, data)
+                                                       ^
+hello_world_small.c:42:3: note: in expansion of macro 'IOWR_ALTERA_AVALON_PIO_DATA'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+   ^
+hello_world_small.c:42:31: note: in expansion of macro 'led'
+   IOWR_ALTERA_AVALON_PIO_DATA(led, cnt&0xff);
+                               ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:36:44 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:36:58 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:43:3: error: 'btn' undeclared (first use in this function)
+   btn = IOWR_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
+   ^
+hello_world_small.c:43:3: note: each undeclared identifier is reported only once for each function it appears in
+hello_world_small.c:43:48: error: macro "IOWR_ALTERA_AVALON_PIO_DATA" requires 2 arguments, but only 1 given
+   btn = IOWR_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
+                                                ^
+hello_world_small.c:43:9: error: 'IOWR_ALTERA_AVALON_PIO_DATA' undeclared (first use in this function)
+   btn = IOWR_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
+         ^
+hello_world_small.c:44:6: error: expected '(' before 'btn'
+   if btn = 1
+      ^
+hello_world_small.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+  int cnt = 0;
+      ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:36:59 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:39:00 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:22:13: error: expected expression before 'unsigned'
+ #define bp (unsigned int *) BUTTON_BASE
+             ^
+hello_world_small.c:43:6: note: in expansion of macro 'bp'
+   if bp = 1 {
+      ^
+hello_world_small.c:43:9: error: lvalue required as left operand of assignment
+   if bp = 1 {
+         ^
+hello_world_small.c:43:13: error: expected ';' before '{' token
+   if bp = 1 {
+             ^
+hello_world_small.c:37:6: warning: unused variable 'led_on' [-Wunused-variable]
+  int led_on = 1;
+      ^
+hello_world_small.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+  int cnt = 0;
+      ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:39:01 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:39:14 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:22:13: error: expected expression before 'unsigned'
+ #define bp (unsigned int *) BUTTON_BASE
+             ^
+hello_world_small.c:43:6: note: in expansion of macro 'bp'
+   if bp == 1 {
+      ^
+In file included from hello_world_small.c:19:0:
+../test2_bsp/system.h:64:21: warning: statement with no effect [-Wunused-value]
+ #define BUTTON_BASE 0x11030
+                     ^
+hello_world_small.c:22:29: note: in expansion of macro 'BUTTON_BASE'
+ #define bp (unsigned int *) BUTTON_BASE
+                             ^
+hello_world_small.c:43:6: note: in expansion of macro 'bp'
+   if bp == 1 {
+      ^
+hello_world_small.c:43:14: error: expected ';' before '{' token
+   if bp == 1 {
+              ^
+hello_world_small.c:37:6: warning: unused variable 'led_on' [-Wunused-variable]
+  int led_on = 1;
+      ^
+hello_world_small.c:36:6: warning: unused variable 'cnt' [-Wunused-variable]
+  int cnt = 0;
+      ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:39:15 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:41:23 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:42:6: error: expected '(' before '*' token
+   if *bp == 1 {
+      ^
+hello_world_small.c:42:6: warning: statement with no effect [-Wunused-value]
+make: *** [obj/default/hello_world_small.o] Error 1
+11:41:24 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:41:41 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:44:8: error: lvalue required as left operand of assignment
+    led = 255;
+        ^
+hello_world_small.c:46:12: error: lvalue required as left operand of assignment
+   else led = 152;
+            ^
+make: *** [obj/default/hello_world_small.o] Error 1
+11:41:42 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:42:31 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test2_bsp//HAL/inc -I../test2_bsp/ -I../test2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking test2.elf
+nios2-elf-g++  -T'../test2_bsp//linker.x' -msys-crt0='../test2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test2_bsp/  -msmallc  -Wl,-Map=test2.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test2.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert test2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag --stdin_dev jtag --stdout_dev jtag --sopc_system_name button --quartus_project_dir "C:/BE/SOPC2" --jdi ../..//output_files/sopc.jdi --sopcinfo C:/BE/SOPC2/software/test2_bsp/../../button.sopcinfo
+Info: (test2.elf) 3564 Bytes program size (code + initialized data).
+Info:             15 KBytes free for stack + heap.
+Info: Creating test2.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test2.elf >test2.objdump
+[test2 build complete]
+11:42:33 **** Incremental Build of configuration Nios II for project test2_bsp ****
+make all 
+[BSP build complete]
+11:42:41 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+[test2 build complete]
+08:22:41 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+[test2 build complete]
+08:23:39 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+[test2 build complete]
+08:24:04 **** Incremental Build of configuration Nios II for project test2 ****
+make all 
+Info: Building ../test2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test2_bsp/
+[BSP build complete]
+[test2 build complete]

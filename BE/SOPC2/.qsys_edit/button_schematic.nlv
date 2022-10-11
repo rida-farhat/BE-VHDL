@@ -1,0 +1,21 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst button.cpu.reset_bridge -pg 1
+preplace inst button.Button -pg 1 -lvl 3 -y 240
+preplace inst button -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst button.LED -pg 1 -lvl 3 -y 420
+preplace inst button.cpu -pg 1 -lvl 1 -y 110
+preplace inst button.jtag -pg 1 -lvl 3 -y 140
+preplace inst button.cpu.cpu -pg 1
+preplace inst button.cpu.clock_bridge -pg 1
+preplace inst button.clk_0 -pg 1 -lvl 2 -y 300
+preplace inst button.ram -pg 1 -lvl 3 -y 340
+preplace netloc POINT_TO_POINT<net_container>button</net_container>(MASTER)cpu.irq,(SLAVE)jtag.irq) 1 1 2 NJ 200 900
+preplace netloc EXPORT<net_container>button</net_container>(SLAVE)button.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 410 NJ
+preplace netloc EXPORT<net_container>button</net_container>(SLAVE)LED.external_connection,(SLAVE)button.led_external_connection) 1 0 3 NJ 450 NJ 450 NJ
+preplace netloc INTERCONNECT<net_container>button</net_container>(SLAVE)LED.reset,(MASTER)cpu.debug_reset_request,(SLAVE)clk_0.clk_in_reset,(SLAVE)Button.reset,(SLAVE)cpu.reset,(SLAVE)ram.reset1,(SLAVE)jtag.reset,(MASTER)clk_0.clk_reset) 1 0 3 240 70 600 180 840
+preplace netloc FAN_OUT<net_container>button</net_container>(SLAVE)jtag.clk,(SLAVE)ram.clk1,(SLAVE)LED.clk,(SLAVE)cpu.clk,(SLAVE)Button.clk,(MASTER)clk_0.clk) 1 0 3 200 30 NJ 140 860
+preplace netloc EXPORT<net_container>button</net_container>(SLAVE)button.button_external_connection,(SLAVE)Button.external_connection) 1 0 3 NJ 270 NJ 270 NJ
+preplace netloc INTERCONNECT<net_container>button</net_container>(MASTER)cpu.data_master,(SLAVE)ram.s1,(MASTER)cpu.instruction_master,(SLAVE)Button.s1,(SLAVE)jtag.avalon_jtag_slave,(SLAVE)cpu.debug_mem_slave,(SLAVE)LED.s1) 1 0 3 220 50 620 160 880
+levelinfo -pg 1 0 170 1090
+levelinfo -hier button 180 360 670 930 1080
