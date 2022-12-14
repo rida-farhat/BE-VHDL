@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50'
+Slack : -5.557
+TNS   : -194.926
+
+Type  : Slow 1200mV 85C Model Setup 'in_freq'
+Slack : -0.799
+TNS   : -9.096
+
+Type  : Slow 1200mV 85C Model Setup 'diviseur2:b2v_inst2|tmp'
+Slack : -0.113
+TNS   : -0.471
+
+Type  : Slow 1200mV 85C Model Hold 'diviseur2:b2v_inst2|tmp'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'in_freq'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50'
+Slack : 0.547
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : -3.000
+TNS   : -69.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'in_freq'
+Slack : -3.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'diviseur2:b2v_inst2|tmp'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50'
+Slack : -4.805
+TNS   : -166.309
+
+Type  : Slow 1200mV 0C Model Setup 'in_freq'
+Slack : -0.590
+TNS   : -5.928
+
+Type  : Slow 1200mV 0C Model Setup 'diviseur2:b2v_inst2|tmp'
+Slack : -0.049
+TNS   : -0.113
+
+Type  : Slow 1200mV 0C Model Hold 'in_freq'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'diviseur2:b2v_inst2|tmp'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : -3.000
+TNS   : -69.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'in_freq'
+Slack : -3.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'diviseur2:b2v_inst2|tmp'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50'
+Slack : -2.702
+TNS   : -82.179
+
+Type  : Fast 1200mV 0C Model Setup 'in_freq'
+Slack : -0.004
+TNS   : -0.004
+
+Type  : Fast 1200mV 0C Model Setup 'diviseur2:b2v_inst2|tmp'
+Slack : 0.463
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'diviseur2:b2v_inst2|tmp'
+Slack : 0.049
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'in_freq'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : -3.000
+TNS   : -73.379
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'in_freq'
+Slack : -3.000
+TNS   : -22.264
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'diviseur2:b2v_inst2|tmp'
+Slack : -1.000
+TNS   : -9.000
+
+------------------------------------------------------------

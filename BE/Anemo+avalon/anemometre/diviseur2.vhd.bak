@@ -1,0 +1,35 @@
+library ieee;
+Use ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity diviseur is
+port (
+	clk_50 : in std_logic;
+	hz : out std_logic);
+end entity diviseur;
+
+
+
+architecture arch_frq of diviseur is
+signal tmp: std_logic;
+--signal cnt: integer := 0;
+
+begin
+
+process (clk_50) is
+variable cnt: integer := 0;
+
+begin
+
+if rising_edge(clk) then
+	cnt := cnt + 1 ;
+	if cnt = 25000000 then
+		tmp <= not tmp;
+		cnt <= 0;
+	end if;
+end if;
+
+hz <= tmp;
+
+end process;
+end architecture arch_frq;
