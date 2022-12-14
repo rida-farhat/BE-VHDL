@@ -1,0 +1,39 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+
+entity reg_decalage is
+	port(
+		start_c : in std_logic;
+		cs : in std_logic;
+		clk_1M : in std_logic;
+		raz_n : in std_logic;
+		data_in : in std_logic;
+		data_out : out std_logic_vector(11 downto 0)
+		);
+end reg_decalage;
+
+architecture arch_reg_dec of reg_decalage is
+
+
+begin 
+
+process(clk_1M, raz_n)
+begin
+
+if raz_n = '0' then
+	data_out <= x"000";
+elsif rising_edge(clk_1M) then
+	if start_c ='0' and cs ='0' then
+		data_out(0) <= data_in;
+		for i in 1 to 11 loop
+			data_out(i) <= data_out(i-1);
+		end loop;
+	end if;
+end if;
+
+end process;
+
+end architecture arch_reg_dec;

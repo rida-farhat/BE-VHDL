@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Nov 14 11:38:08 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : avalon
+Top-level Entity Name : avalon_anemometre
+Family : Cyclone IV E
+Total logic elements : 1,909
+    Total combinational functions : 1,713
+    Dedicated logic registers : 969
+Total registers : 969
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 171,264
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

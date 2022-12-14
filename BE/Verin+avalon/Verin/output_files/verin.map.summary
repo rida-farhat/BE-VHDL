@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Dec 12 00:38:37 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : verin
+Top-level Entity Name : mcp
+Family : Cyclone IV E
+Total logic elements : 1,170
+    Total combinational functions : 828
+    Dedicated logic registers : 805
+Total registers : 805
+Total pins : 111
+Total virtual pins : 0
+Total memory bits : 262,144
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

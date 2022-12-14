@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst avalon_anemo.avalon_anemometre_0 -pg 1 -lvl 3 -y 310
+preplace inst avalon_anemo.bp -pg 1 -lvl 3 -y 30
+preplace inst avalon_anemo -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst avalon_anemo.clk_0 -pg 1 -lvl 2 -y 360
+preplace inst avalon_anemo.cpu.cpu -pg 1
+preplace inst avalon_anemo.cpu -pg 1 -lvl 1 -y 150
+preplace inst avalon_anemo.cpu.clock_bridge -pg 1
+preplace inst avalon_anemo.RAM -pg 1 -lvl 3 -y 230
+preplace inst avalon_anemo.LEDS -pg 1 -lvl 3 -y 410
+preplace inst avalon_anemo.cpu.reset_bridge -pg 1
+preplace inst avalon_anemo.Jtag -pg 1 -lvl 3 -y 130
+preplace netloc INTERCONNECT<net_container>avalon_anemo</net_container>(SLAVE)LEDS.reset,(SLAVE)clk_0.clk_in_reset,(MASTER)clk_0.clk_reset,(MASTER)cpu.debug_reset_request,(SLAVE)bp.reset,(SLAVE)RAM.reset1,(SLAVE)cpu.reset,(SLAVE)avalon_anemometre_0.reset,(SLAVE)Jtag.reset) 1 0 3 110 110 470 220 790
+preplace netloc EXPORT<net_container>avalon_anemo</net_container>(SLAVE)avalon_anemo.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 370 NJ
+preplace netloc POINT_TO_POINT<net_container>avalon_anemo</net_container>(SLAVE)Jtag.irq,(MASTER)cpu.irq) 1 1 2 NJ 240 750
+preplace netloc EXPORT<net_container>avalon_anemo</net_container>(SLAVE)bp.external_connection,(SLAVE)avalon_anemo.bp) 1 0 3 NJ 50 NJ 60 NJ
+preplace netloc EXPORT<net_container>avalon_anemo</net_container>(SLAVE)avalon_anemo.leds,(SLAVE)LEDS.external_connection) 1 0 3 NJ 440 NJ 440 NJ
+preplace netloc INTERCONNECT<net_container>avalon_anemo</net_container>(MASTER)cpu.data_master,(SLAVE)RAM.s1,(SLAVE)Jtag.avalon_jtag_slave,(MASTER)cpu.instruction_master,(SLAVE)cpu.debug_mem_slave,(SLAVE)LEDS.s1,(SLAVE)avalon_anemometre_0.avalon_slave_0,(SLAVE)bp.s1) 1 0 3 90 90 490 200 730
+preplace netloc FAN_OUT<net_container>avalon_anemo</net_container>(SLAVE)cpu.clk,(SLAVE)RAM.clk1,(SLAVE)LEDS.clk,(MASTER)clk_0.clk,(SLAVE)bp.clk,(SLAVE)Jtag.clk,(SLAVE)avalon_anemometre_0.clock) 1 0 3 70 70 NJ 80 770
+levelinfo -pg 1 0 40 990
+levelinfo -hier avalon_anemo 50 230 560 830 980

@@ -1,0 +1,27 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst verin_avalon.nios2_gen2_0 -pg 1 -lvl 1 -y 200
+preplace inst verin_avalon.bp -pg 1 -lvl 3 -y 570
+preplace inst verin_avalon.nios2_gen2_0.cpu -pg 1
+preplace inst verin_avalon.led -pg 1 -lvl 3 -y 470
+preplace inst verin_avalon.clk_0 -pg 1 -lvl 2 -y 290
+preplace inst verin_avalon -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst verin_avalon.nios2_gen2_0.reset_bridge -pg 1
+preplace inst verin_avalon.jtag_uart_0 -pg 1 -lvl 3 -y 210
+preplace inst verin_avalon.onchip_memory2_0 -pg 1 -lvl 3 -y 310
+preplace inst verin_avalon.ver_component_0 -pg 1 -lvl 3 -y 30
+preplace inst verin_avalon.nios2_gen2_0.clock_bridge -pg 1
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)verin_avalon.bp_external_connection,(SLAVE)bp.external_connection) 1 0 3 NJ 600 NJ 600 NJ
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)verin_avalon.led_external_connection,(SLAVE)led.external_connection) 1 0 3 NJ 500 NJ 500 NJ
+preplace netloc INTERCONNECT<net_container>verin_avalon</net_container>(SLAVE)jtag_uart_0.reset,(SLAVE)ver_component_0.reset,(SLAVE)bp.reset,(SLAVE)nios2_gen2_0.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)led.reset,(SLAVE)clk_0.clk_in_reset,(MASTER)clk_0.clk_reset,(SLAVE)onchip_memory2_0.reset1) 1 0 3 230 380 630 240 1010
+preplace netloc POINT_TO_POINT<net_container>verin_avalon</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 1 2 NJ 420 1090
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)verin_avalon.ver_component_0_clk_adc,(SLAVE)ver_component_0.clk_adc) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)verin_avalon.ver_component_0_out_sens,(SLAVE)ver_component_0.out_sens) 1 0 3 NJ 480 NJ 400 NJ
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)verin_avalon.ver_component_0_out_pwm,(SLAVE)ver_component_0.out_pwm) 1 0 3 NJ 460 NJ 380 NJ
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)verin_avalon.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 420 NJ
+preplace netloc FAN_OUT<net_container>verin_avalon</net_container>(MASTER)clk_0.clk,(SLAVE)led.clk,(SLAVE)ver_component_0.clock,(SLAVE)bp.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)onchip_memory2_0.clk1) 1 0 3 190 400 NJ 280 1050
+preplace netloc INTERCONNECT<net_container>verin_avalon</net_container>(MASTER)nios2_gen2_0.data_master,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)onchip_memory2_0.s1,(SLAVE)led.s1,(SLAVE)bp.s1,(SLAVE)ver_component_0.avalon_slave_0,(SLAVE)jtag_uart_0.avalon_jtag_slave) 1 0 3 210 340 590 220 990
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)verin_avalon.ver_component_0_data_in,(SLAVE)ver_component_0.data_in) 1 0 3 NJ 440 NJ 360 NJ
+preplace netloc EXPORT<net_container>verin_avalon</net_container>(SLAVE)ver_component_0.cs,(SLAVE)verin_avalon.ver_component_0_cs) 1 0 3 NJ 360 NJ 260 NJ
+levelinfo -pg 1 0 160 1300
+levelinfo -hier verin_avalon 170 350 780 1140 1290
